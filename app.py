@@ -6,14 +6,16 @@ import fitz  # PyMuPDF
 import base64
 
 load_dotenv()
+
+
+# Configure Gemini API key
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
 if os.getenv("GOOGLE_API_KEY") is None:
     st.error("API Key not set in deployment environment.")
 else:
     st.success("API Key is set.")
 
-
-# Configure Gemini API key
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def get_gemini_response(input_prompt, job_description):
     try:
