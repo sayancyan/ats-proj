@@ -1,5 +1,4 @@
-python-dotenv
 streamlit
-Pillow
+python-dotenv
 PyMuPDF
 google-generativeai
