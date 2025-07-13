@@ -11,7 +11,8 @@ import fitz  # PyMuPDF imported for PDF processing
 import google.generativeai as genai
 
 # Configure Gemini API key
-genai.configure(api_key=st.secrets("GOOGLE_API_KEY"))
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+
 
 def get_gemini_response(input_prompt, pdf_content, job_description):
     model = genai.GenerativeModel('gemini-1.5-flash')
