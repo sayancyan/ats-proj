@@ -1,4 +1,4 @@
-Go to the `local` branch
+Go to the `local` branch for local deployment
 To run: (in cmd)
 
 - `python3 -m venv .venv`
