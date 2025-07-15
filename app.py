@@ -3,10 +3,14 @@ import streamlit as st
 import fitz
 import google.generativeai as genai
 
-#  API key config (local deployment)
-# ⚠️ genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])  # For Streamlit Cloud Deployment
-genai.configure(api_key="YOUR_LOCAL_API_KEY_HERE")  # ⚠️ Local deployment uses direct key
+# For Local Deployment
+import os
+from dotenv import load_dotenv
+load_dotenv() # Load environment variables
 
+#  API key config
+# genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])  # ⚠️ Streamlit Cloud Deployment
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))     #  Local deployment
 # Getting Input
 def input_pdf_setup(uploaded_file):
     if uploaded_file is not None:

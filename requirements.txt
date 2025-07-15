@@ -1,3 +1,5 @@
 streamlit
 PyMuPDF
 google-generativeai
+
+python-dotenv   # ⚠️For Local Deployment
